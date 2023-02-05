@@ -32,16 +32,16 @@ const path = `https://twitter.com/intent/tweet?text=${Quotes[index].statement}  
   return (
     <>
     <UserBox bgcolor={"#"+ Quotes[index].color}>
-      <Box bgcolor="white" sx={{width:"70vh", padding:"25px", borderRadius:"10px"}}>
-      <Typography variant="h4" component="h1" color={"#"+ Quotes[index].color} pb="1vw"> {Quotes[index].statement}</Typography>
-       <Typography textAlign="right" variant="h6" color={"#"+ Quotes[index].color} pb="2vw">- {Quotes[index].name}</Typography> 
+      <Box bgcolor="white" sx={{width:"70vh", padding:"25px", borderRadius:"10px"}} id="quote-box">
+      <Typography variant="h4" component="h1" color={"#"+ Quotes[index].color} pb="1vw" id="text"> {Quotes[index].statement}</Typography>
+       <Typography textAlign="right" variant="h6" color={"#"+ Quotes[index].color} pb="2vw" id="author">- {Quotes[index].name}</Typography> 
        <Stack  direction="row" justifyContent="space-between">
-        <Button variant="contained" color="primary" sx={{backgroundColor:"#"+ Quotes[index].color, "&.MuiButtonBase-root:hover": {
+        <Button variant="contained" color="primary" id="new-quote" sx={{backgroundColor:"#"+ Quotes[index].color, "&.MuiButtonBase-root:hover": {
                 bgcolor: "#"+ Quotes[index].color
               }}} onClick={() => ChangeQuote()}>
          New Quote
        </Button>
-       <Link href={path} target={"_blank"} sx={{textDecoration:"none"}}>
+       <Link id="tweet-quote" href={path} target={"_blank"} sx={{textDecoration:"none"}}>
        <Button variant="contained" sx={{backgroundColor:"#"+ Quotes[index].color, "&.MuiButtonBase-root:hover": {
                 bgcolor: "#"+ Quotes[index].color
               }}} endIcon={<TwitterIcon/>} >

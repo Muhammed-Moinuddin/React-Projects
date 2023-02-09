@@ -1,0 +1,17 @@
+.square{
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    border: 1 black solid;
+    border-radius: 0px;
+    margin:0;
+}
+.square:active{
+    padding: 0;
+    float: none;
+    margin: 0;
+}
+.board-row{
+    margin: 0;
+    padding: 0;
+}
